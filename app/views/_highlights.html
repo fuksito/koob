@@ -1,0 +1,9 @@
+<div ng-controller="HighlightsCtrl">
+  <h1>Highlights</h1>
+
+  <ul class="small-block-grid-3">
+    <li ng-repeat='book in books | filter: {type: "book"}'>
+      <ng-include onload='item = book' src="'views/highlights/'+ book.type +'.html'"></ng-include>
+    </li>
+  </ul>
+</div>

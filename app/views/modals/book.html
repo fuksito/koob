@@ -1,0 +1,48 @@
+<div class='book-modal row'>
+  <div class='small-4 columns'>
+    <img ng-src='{{ book.medium_cover_image_url | trustAsResourceUrl }}' />
+  </div>
+
+  <div class='small-8 columns'>
+    <h1>{{ book.title }}</h1>
+    <p>{{ book.author }}</p>
+
+    <p ng-bind-html="book.description"></p>
+
+    <div class='details'>
+
+      <table>
+        <tr ng-show='book.year'>
+          <th>Year</th>
+          <td>{{ book.year }}</td>
+        </tr>
+
+        <tr ng-show='book.number_of_pages'>
+          <th>Pages</th>
+          <td>{{ book.number_of_pages }}</td>
+        </tr>
+
+        <tr ng-show='book.content_format'>
+          <th>Format</th>
+          <td>{{ book.content_format }}</td>
+        </tr>
+
+        <tr ng-show='book.size'>
+          <th>Size</th>
+          <td>{{ book.size | bytesToSize }}</td>
+        </tr>
+
+        <tr ng-show='book.isbn'>
+          <th>ISBN</th>
+          <td>{{ book.isbn }}</td>
+        </tr>
+      </table>
+
+      <p ng-show='book.price' class='price'>
+        Price: <i class='fa fa-dollar'></i> {{ book.price }}
+      </p>
+    </div>
+
+  </div>
+</div>
+

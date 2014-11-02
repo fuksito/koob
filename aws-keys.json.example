@@ -1,0 +1,5 @@
+{
+  "AWSAccessKeyId": "AKxxxxxxxxxx",
+  "AWSSecretKey": "super-secret-key",
+  "bucket": "your-bucket-name"
+}

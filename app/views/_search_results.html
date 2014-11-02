@@ -1,0 +1,28 @@
+<div ng-controller='SearchResultsCtrl' class='search-results' infinite-scroll="loadNext()" infinite-scroll-distance="1" infinite-scroll-disabled="noNext()">
+
+  <div class='results-item row' ng-repeat='book in books' ng-click='open(book)'>
+      <div class='small-4 columns cover'>
+        <img ng-src="{{ book.small_cover_image_url | trustAsResourceUrl }}" />
+      </div>
+      <div class='small-8 columns'>
+        <h3>{{ book.title }}</h3>
+        <p><span>{{ book.author }}</span></p>
+
+        <div>
+          Year: {{ book.year }}
+        </div>
+      </div>
+
+
+  </div>
+
+  <div ng-show='loading' class='row'>
+    <div class='small-3 small-centered columns'>
+      <div class='loading'>
+        <i class="fa fa-spinner fa-spin"></i>
+        Loading ...
+      </div>
+    </div>
+  </div>
+
+</div>

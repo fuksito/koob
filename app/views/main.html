@@ -1,0 +1,13 @@
+<div class='row'>
+  <div class='small-10 small-centered columns'>
+
+    <h1 ng-click='query = ""'>
+      <img src='/images/blloon-logo-dark.svg' alt='blloon search logo' />
+    </h1>
+
+    <input ng-model="query" type="text" placeholder="Search for a book"></input>
+
+    <ng-include ng-if='!query' src="'views/_highlights.html'"></ng-include>
+    <ng-include ng-if='query' src="'views/_search_results.html'"></ng-include>
+  </div>
+</div>
